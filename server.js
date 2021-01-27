@@ -23,7 +23,7 @@ io.on("connection", (socket) => {
     socket.join(user.room);
 
     // when connecting
-    socket.emit("message", formatMessage(botName, "Welcome to Dolevdo"));
+    socket.emit("message", formatMessage(botName, `Welcome to ${user.username}`));
 
     // Bordcast when a user connects
     socket.broadcast
